@@ -1,0 +1,63 @@
+///create a smile face like smile emoji
+
+#include<iostream>
+#include<graphics.h>
+
+using namespace std;
+int main()
+{
+    int gd = DETECT;
+    int gm;
+    initgraph(&gd,&gm,"c:\\TC\\BGI");
+
+    ///shedding 1
+    arc(100,200,10,170,50);
+    ///shedding 2
+    arc(350,200,10,170,50);
+    ///circle1..
+    arc(100,200,0,360,40);
+    ///circle2..
+    arc(350,200,0,360,40);
+    ///under circle1
+    arc(100,200,0,360,5);
+    ///under circle2
+    arc(350,200,0,360,5);
+    ///line under..
+    line(150, 190, 300, 190);
+    ///line top..
+    line(100, 50, 300, 50);
+    ///line left side..
+    line(90, 130, 100, 50);
+    ///shedding of left wheel..
+     arc(100,200,98,171,70);
+     ///shedding of under line..
+     line(30, 190, 50, 190);
+     ///front glass..
+     line(300,50,330,120);
+     ///shedding of front wheel..
+     arc(344,190,357,100,70);
+     ///shedding of front wheel line..
+     line(398, 190, 412, 192);
+
+     ///gate...
+     line(91,130,200,130);
+     line(200,50,200,190);
+     line(300,130,300,190);
+     line(300,130,330,122);
+     line(300,130,200,130);
+     ///circle...
+     arc(150,140,0,360,5);
+     arc(215,140,0,360,5);
+
+     ///line...
+     line(152,140,140,140);
+     line(152,141,140,141);
+
+     line(215,140,207,140);
+     line(215,141,207,141);
+
+
+    getch();
+    closegraph;
+
+}
