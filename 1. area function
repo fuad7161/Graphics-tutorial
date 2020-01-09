@@ -1,0 +1,28 @@
+
+///arc() function lecture 1
+
+#include<iostream>
+#include<graphics.h>
+
+using namespace std;
+int main()
+{
+
+    int gd = DETECT;
+    int gm;
+    initgraph(&gd, &gm,"c:\\TC\\BGI" );
+
+    /*first two argument are 200 200 are for position of arc CENTER of arc;
+    third argument is staring angle
+    IMP NOTE : 0 degree start from right hand side from the center of the area.
+    fifth argument is radius of arc . now let's run the code.
+    */
+
+    arc(200 , 200, 0 ,180 ,50);
+    /// first 200 & 200 the coordinate of x & y axis
+    /// 0 & 180 is the initial degree and finishing degree
+    /// 50 is radius
+
+    getch();
+    closegraph;
+}
