@@ -1,0 +1,27 @@
+///create a smile face like smile emoji
+
+#include<iostream>
+#include<graphics.h>
+
+using namespace std;
+int main()
+{
+    int gd = DETECT;
+    int gm;
+    initgraph(&gd,&gm,"c:\\TC\\BGI");
+    //face...
+    arc(200,200 ,0,360,100);
+    //left eye....
+    arc(150,170,0,360,10);
+    //right eye...
+    arc(250,170,0,360,10);
+    //mouth..
+    arc(200,230,200,340,40);
+    //nose....
+    arc(200 ,200,0,0,5);
+
+
+    getch();
+    closegraph;
+
+}
