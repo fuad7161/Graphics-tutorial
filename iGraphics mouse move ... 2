@@ -1,0 +1,92 @@
+/*
+Author: Fuadul Hasan(fuadul202@gmail.com)
+BSMRSTU,Gopalganj
+*/
+#include <iostream>
+# include "iGraphics.h"
+using namespace std;
+
+#define screenwidth 1000
+#define screenhight 600
+
+int mposx,  mposy;
+
+int x = 0;
+int y = 0;
+
+int r = 255;
+int g = 255;
+int b = 255;
+
+void iDraw()
+{
+	iClear();
+
+	iSetColor(r, g, b);
+	iRectangle(x + 150, y + 20, 700, 300 -20);
+	iRectangle(x + 200, y + 150, 100, 50);
+	iRectangle(x + 700, y + 150, 100, 50);
+	iRectangle(x + 450, y + 30, 100, 200); 
+
+	iCircle(x + 500, y + 400, 50);
+
+	iLine(x + 100, y + 300, x + 500, y + 500);
+	iLine(x + 500, y + 500, x + 900, y + 300);
+	iLine(x + 900, y + 300, x + 100, y + 300);
+}
+
+void iMouseMove(int mx, int my)
+{
+	//place your codes here
+	x = mx - 150;
+	y = my - 20;
+}
+
+void iMouse(int button, int state, int mx, int my)
+{
+	/*if(button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+	{
+		//place your codes here
+		x = mx - 150;
+		y = my - 20;
+	}
+	if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
+	{
+		//place your codes here
+		r = 255;
+		b = 0;
+		g = 0;
+	}*/
+}
+
+void iPassiveMouseMove(int mx,int my)
+{
+	//place your code here
+
+ mposx = mx;
+ mposy = my;
+ if(mx== 2){}        /*Something to do with mx*/
+ else if(my== 2){}   /*Something to do with my*/
+
+}
+
+void iKeyboard(unsigned char key)
+{
+	if (key == 'w'){
+		//program
+	}
+}
+
+void iSpecialKeyboard(unsigned char key)
+{
+	if(key == GLUT_KEY_UP){
+		//program
+	}
+}
+//
+int main()
+{
+	//place your own initialization codes here.
+	iInitialize(screenwidth, screenhight, "youtube project");
+	return 0;
+}
