@@ -1,0 +1,115 @@
+/*
+Author: Fuadul Hasan(fuadul202@gmail.com)
+BSMRSTU,Gopalganj
+*/
+#include <iostream>
+# include "iGraphics.h"
+using namespace std;
+
+#define screenwidth 1000
+#define screenhight 600
+
+int mposx,  mposy;
+
+//iline variable
+int x = 100;
+int y = 100;
+int x2 = 100;
+int y2 = 300;
+
+//ielleps and iflledelleps variable
+int ex = 500;
+int ey = 400;
+int a = 50;
+int b = 30;
+int a2 = 25;
+int b2 = 15;
+
+//icircle and ifilledcircle
+int cx = 500;
+int cy = 200;
+int r = 50;
+int r2 = 25;
+
+//irectangle and ifilledractangle
+int rx = 800;
+int ry = 100;
+int dx = 100;
+int dy = 200;
+int dx2 = 50;
+int dy2 = 140;
+
+void iDraw()
+{
+	//place your drawing codes here
+	iClear();
+	iSetColor(255, 255, 255);
+	iLine(x, y, x2, y2);
+
+	iSetColor(255, 0, 0);
+	iEllipse(ex, ey, a, b);
+
+	iFilledEllipse(ex, ey, a2, b2);
+
+	iSetColor(0, 0,255);
+	iCircle(cx, cy, r);
+	iFilledCircle(cx, cy, r2);
+
+	iSetColor(255, 0, 255);
+	iRectangle(rx, ry, dx, dy);
+	iFilledRectangle(rx, ry, dx2, dx2);
+}
+
+void iMouseMove(int mx, int my)
+{
+	//place your codes here
+}
+
+void iMouse(int button, int state, int mx, int my)
+{
+	if(button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+	{
+		//place your codes here
+	}
+	if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
+	{
+		//place your codes here
+	}
+}
+
+void iPassiveMouseMove(int mx,int my)
+{
+	//place your code here
+
+ mposx = mx;
+ mposy = my;
+ if(mx== 2){}        /*Something to do with mx*/
+ else if(my== 2){}   /*Something to do with my*/
+
+}
+
+void iKeyboard(unsigned char key)
+{
+	if(key == 'q')
+	{
+		//do something with 'q'
+	}
+	//place your codes for other keys here
+}
+
+void iSpecialKeyboard(unsigned char key)
+{
+
+	if(key == GLUT_KEY_END)
+	{
+		exit(0);
+	}
+	//place your codes for other keys here
+}
+//
+int main()
+{
+	//place your own initialization codes here.
+	iInitialize(screenwidth, screenhight, "youtube project");
+	return 0;
+}
